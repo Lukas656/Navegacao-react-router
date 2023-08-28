@@ -1,28 +1,38 @@
-.menu{
+.Menu {
     display: flex;
-    flex-basis: 200px;
-    background-color: dodgerblue;
+    flex-basis: 250px;
+
+    background: linear-gradient(to top, #00b4db, #006c90);
+    
+    z-index: 1;
+    -webkit-box-shadow: 4px 0px 17px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 0px 17px -5px rgba(0,0,0,0.75);
+    box-shadow: 4px 0px 17px -5px rgba(0,0,0,0.75);
 }
 
-.menu ul{
+.Menu nav {
+    flex-grow: 1;
+}
+
+.Menu ul {
     list-style: none;
     padding: 0;
 }
-.menu nav{
-    flex: 1;
-}
-.menu li{
+
+.Menu li {
     display: flex;
 }
-.menu li a{
+
+.Menu li a {
     flex: 1;
+    padding: 10px;
+    margin-bottom: 10px;
+
     text-decoration: none;
     color: #fff;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    padding: 10px;
+    font-size: 1.5rem;
 }
 
-.menu li a:hover{
-    background-color: #00000020;
+.Menu li a:hover {
+    background: #00000020;
 }

@@ -1,10 +1,12 @@
-import React from "react";
+import React from 'react'
+import PageTitle from '../../components/layout/PageTitle'
 
 const Home = props => (
-  <aside className="home">
-    <h1>Home</h1>
-  </aside>
-
+    <div className="Home">
+        <PageTitle
+            title="Módulo Hooks"
+            subtitle="Hooks são uma nova adição ao React 16.8." />
+    </div>
 )
 
-export default Home;
+export default Home
