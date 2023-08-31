@@ -12,8 +12,7 @@ import UseMemo from '../../views/examples/UseMemo.jsx'
 import UseContext from '../../views/examples/UseContext.jsx'
 import UseReducer from '../../views/examples/UseReducer.jsx'
 import UseCustom from '../../views/examples/UseCustom.jsx'
-import About from "../../views/examples/About";
-import Param from "../../views/examples/Param.jsx";
+import About from "../../views/examples/About.jsx";
  
 const Content = props => (
   <main className="Content">
@@ -29,8 +28,6 @@ const Content = props => (
       <Route path="/useReducer" element={<UseReducer />} />
       <Route path="/useCustom" element={<UseCustom />} />
       <Route path="/about" element={<About />} />
-      <Route path="/param/:id" element={<Param />} />
-
       <Route path="*" element={<NotFound />} />
     </Routes>
    
