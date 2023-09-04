@@ -1,6 +1,6 @@
 .Menu {
     display: flex;
-    flex-basis: 200px;
+    flex-basis: 100px;
     
     background: linear-gradient(to top, #00b4db, #006c90);
     
@@ -25,7 +25,7 @@
 
 .Menu li a {
     flex: 1;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 10px;
 
     text-decoration: none;
