@@ -7,29 +7,29 @@ const UseEffect = (props) => {
     const [fatorial, setFatorial] = useState(1)
 
 
-    function calcFatorial(num){
+    function calcFatorial(num) {
         const n = parseInt(num)
-        if(n < 0) return -1
-        if(n === 0) return 1       
-        return calcFatorial(n - 1)*n
+        if (n < 0) return -1
+        if (n === 0) return 1
+        return calcFatorial(n - 1) * n
     }
 
 
-    useEffect(function(){
+    useEffect(function () {
         setFatorial(calcFatorial(number))
-    },[number])
+    }, [number])
 
-    useEffect(function(){
-        if(fatorial > 10000){
+    useEffect(function () {
+        if (fatorial > 10000) {
             document.title = 'UseEffect !!!'
         }
     }, [fatorial])
     // EX #02
     const [status, setStatus] = useState("Impar")
 
-        useEffect(function(){
-            setStatus(number % 2 === 0 ? "Par": "Ímpar")    
-        }, [number])
+    useEffect(function () {
+        setStatus(number % 2 === 0 ? "Par" : "Ímpar")
+    }, [number])
 
     return (
         <div className="UseEffect">
@@ -37,21 +37,21 @@ const UseEffect = (props) => {
                 title="Hook UseEffect"
                 subtitle="Permite executar efeitos colaterais em componentes funcionais!"
             />
-            <sectionTitle title='Exercicio #01'/>
+            <sectionTitle title='Exercicio #01' />
             <div className='center'>
                 <div>
                     <span className='text'>Fatorial: </span>
-                    <span className='text red'>{fatorial === -1 ? 'Não Existe': fatorial}</span>
+                    <span className='text red'>{fatorial === -1 ? 'Não Existe' : fatorial}</span>
                 </div>
                 <input type='number' className='input'
                     value={number} onChange={e => setNumber(e.target.value)}
                 ></input>
             </div>
-            <sectionTitle title='Exercicio #02'/>
+            <sectionTitle title='Exercicio #02' />
             <div className='center'>
                 <div>
-                <span className='text'>Status:</span>
-                <span className='text red'>{status}</span>
+                    <span className='text'>Status:</span>
+                    <span className='text red'>{status}</span>
                 </div>
             </div>
 
