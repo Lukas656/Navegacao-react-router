@@ -1,6 +1,7 @@
-# Navegacao-react-router
+## Primeiros Passos
+
 ### `npm start`
-Após clonar o repositório rode os Seguintes comandos
+Apos Clonar o Reposiitório você consiguirá inicia-lo com os seguintes comandos:
 ```bash
   npm i
   cd navegacao
