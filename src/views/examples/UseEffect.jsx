@@ -15,7 +15,7 @@ const UseEffect = () => {
 
     useEffect(() => {
         setFatorial(calcFatorial(number))
-    }, [number])
+    }, [number, calcFatorial]) // incluindo calcFatorial no array de dependências
 
     useEffect(() => {
         if (fatorial > 10000) {
