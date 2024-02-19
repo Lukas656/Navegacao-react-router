@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 
-const UseEffect = (props) => {
+const UseEffect = () => {
 
     const [number, setNumber] = useState(1)
     const [fatorial, setFatorial] = useState(1)
-
 
     function calcFatorial(num) {
         const n = parseInt(num)
@@ -14,20 +13,19 @@ const UseEffect = (props) => {
         return calcFatorial(n - 1) * n
     }
 
-
-    useEffect(function () {
+    useEffect(() => {
         setFatorial(calcFatorial(number))
     }, [number])
 
-    useEffect(function () {
+    useEffect(() => {
         if (fatorial > 10000) {
             document.title = 'UseEffect !!!'
         }
     }, [fatorial])
-    // EX #02
+
     const [status, setStatus] = useState("Impar")
 
-    useEffect(function () {
+    useEffect(() => {
         setStatus(number % 2 === 0 ? "Par" : "Ímpar")
     }, [number])
 
@@ -54,8 +52,6 @@ const UseEffect = (props) => {
                     <span className='text red'>{status}</span>
                 </div>
             </div>
-
-
         </div>
     )
 }
